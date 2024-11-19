@@ -1,2 +1,0 @@
-I used Plotly Express for visualizations but on pushing the ipynb to github, they are not displaying.
-So i downloaded them and put them in the visualizations folder
