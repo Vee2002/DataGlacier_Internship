@@ -1,1 +1,1 @@
-web: python "DataGlacier/Week 4/app.py"
+web: python "Week 4/app.py"
