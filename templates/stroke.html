@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stroke Prediction Form</title>
+  <link rel="stylesheet" href="../static/stroke.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Stroke Prediction Form</h2>
+    <form method="POST" action="/predict">
+      <!-- Gender -->
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <!-- Age -->
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" step="1" required>
+
+      <!-- Hypertension -->
+      <label for="hypertension">Hypertension:</label>
+      <select id="hypertension" name="hypertension" required>
+        <option value="">Select</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <!-- Heart Disease -->
+      <label for="heart_disease">Heart Disease:</label>
+      <select id="heart_disease" name="heart_disease" required>
+        <option value="">Select</option>
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <!-- Ever Married -->
+      <label for="ever_married">Ever Married:</label>
+      <select id="ever_married" name="ever_married" required>
+        <option value="">Select</option>
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+      </select>
+
+      <!-- Work Type -->
+      <label for="work_type">Work Type:</label>
+      <select id="work_type" name="work_type" required>
+        <option value="">Select</option>
+        <option value="Private">Private</option>
+        <option value="Self-employed">Self-employed</option>
+        <option value="Govt_job">Government Job</option>
+        <option value="Children">Children</option>
+        <option value="Never_worked">Never Worked</option>
+      </select>
+
+      <!-- Residence Type -->
+      <label for="Residence_type">Residence Type:</label>
+      <select id="Residence_type" name="Residence_type" required>
+        <option value="">Select</option>
+        <option value="Urban">Urban</option>
+        <option value="Rural">Rural</option>
+      </select>
+
+      <!-- Average Glucose Level -->
+      <label for="avg_glucose_level">Average Glucose Level:</label>
+      <input type="number" id="avg_glucose_level" name="avg_glucose_level" step="0.1" required>
+
+      <!-- BMI -->
+      <label for="bmi">BMI:</label>
+      <input type="number" id="bmi" name="bmi" step="0.1" required>
+
+      <!-- Smoking Status -->
+      <label for="smoking_status">Smoking Status:</label>
+      <select id="smoking_status" name="smoking_status" required>
+        <option value="">Select</option>
+        <option value="Never smoked">Never Smoked</option>
+        <option value="Formerly smoked">Formerly Smoked</option>
+        <option value="Smokes">Smokes</option>
+      </select>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Area to display prediction result -->
+    <div id="result">
+      {% if prediction %}
+      <h3>Prediction Result: {{ prediction }}</h3>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

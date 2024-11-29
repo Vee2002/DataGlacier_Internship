@@ -1,0 +1,74 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stroke Prediction Form</title>
+  <link rel="stylesheet" href="stroke.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Stroke Prediction Form</h2>
+    <form id="strokePredictionForm">
+      <div class="form-group">
+        <label for="gender">Gender (Male/Female/Other):</label>
+        <input type="text" id="gender" name="gender" placeholder="Enter one-hot encoded values (e.g., 1 0 0)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="hypertension">Hypertension (0/1):</label>
+        <input type="number" id="hypertension" name="hypertension" min="0" max="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="heart_disease">Heart Disease (0/1):</label>
+        <input type="number" id="heart_disease" name="heart_disease" min="0" max="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ever_married">Ever Married (No/Yes):</label>
+        <input type="text" id="ever_married" name="ever_married" placeholder="Enter one-hot encoded values (e.g., 0 1)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="work_type">Work Type (Private/Self-employed/Govt-job/Children/Never_worked):</label>
+        <input type="text" id="work_type" name="work_type" placeholder="Enter one-hot encoded values (e.g., 1 0 0 0 0)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="Residence_type">Residence Type (Urban/Rural):</label>
+        <input type="text" id="Residence_type" name="Residence_type" placeholder="Enter one-hot encoded values (e.g., 0 1)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="avg_glucose_level">Average Glucose Level:</label>
+        <input type="number" id="avg_glucose_level" name="avg_glucose_level" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" step="0.1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="smoking_status">Smoking Status (Never/Formerly/Smokes):</label>
+        <input type="text" id="smoking_status" name="smoking_status" placeholder="Enter one-hot encoded values (e.g., 1 0 0)" required>
+      </div>
+
+      <div class="form-group">
+        <label for="stroke">Stroke (0/1):</label>
+        <input type="number" id="stroke" name="stroke" min="0" max="1" required>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
