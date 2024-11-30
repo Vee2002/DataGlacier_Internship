@@ -9,6 +9,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 # Models
 from sklearn.model_selection import train_test_split,cross_val_score
@@ -22,6 +23,9 @@ from sklearn.preprocessing import StandardScaler
 
 
 # Loading the dataset
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
+dataset_path = os.path.join(base_dir, 'Dataset', 'healthcare-dataset-stroke-data.csv')
 
 data = pd.read_csv('Dataset/healthcare-dataset-stroke-data.csv')
 data.head(5)
