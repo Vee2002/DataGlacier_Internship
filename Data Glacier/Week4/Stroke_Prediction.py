@@ -27,7 +27,7 @@ from sklearn.preprocessing import StandardScaler
 base_dir = os.path.dirname(os.path.abspath(__file__))
 dataset_path = os.path.join(base_dir, 'Dataset', 'healthcare-dataset-stroke-data.csv')
 
-data = pd.read_csv('Dataset/healthcare-dataset-stroke-data.csv')
+data = pd.read_csv(dataset_path)
 data.head(5)
 
 
