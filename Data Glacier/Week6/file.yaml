@@ -1,0 +1,15 @@
+file_type: csv
+file_name: 2019-Nov
+dataset_name: 2019-Nov.csv
+inbound_delimiter: ","
+outbound_delimiter: "|"
+columns:
+  - event_time
+  - event_type
+  - product_id
+  - category_id
+  - category_code
+  - brand
+  - price
+  - user_id
+  - user_session
